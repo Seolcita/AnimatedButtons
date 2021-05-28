@@ -1,0 +1,203 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  color: #185adb;
+  /* 	display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: black;
+}
+
+h2 {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+
+/* 1.Rotating Buttons */
+.b1 {
+  margin: 50px 100px;
+  display: inline-block;
+  text-decoration: none;
+  color: #262626;
+  font-family: sans-serif;
+  font-size: 20px;
+  border: 3px solid #262626;
+  padding: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.b1:hover:before {
+  transform: rotate(0deg);
+}
+
+.bottom-left:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e93b81;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+.bottom-right:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e93b81;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom right;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+.top-left:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e93b81;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  transition: transform 1s;
+}
+
+.top-right:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e93b81;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top right;
+  transform: rotate(90deg);
+  transition: transform 1s;
+}
+
+/* 2. Swipe Buttons */
+
+.b2 {
+  margin: 50px 100px;
+  display: inline-block;
+  text-decoration: none;
+  color: #0a81ab;
+  font-size: 20px;
+  border: 3px solid #0a81ab;
+  padding: 13px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.b2:hover {
+  color: white;
+}
+
+.bl:hover:before,
+.br:hover:before {
+  transform: translateX(0);
+}
+
+.bt:hover:before,
+.bb:hover:before {
+  transform: translateY(0);
+}
+
+.bd:hover:before {
+  transform: translate(0);
+}
+
+.left:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a81ab;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.right:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a81ab;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.top:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a81ab;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+
+.bottom:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a81ab;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+.diagonal:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0a81ab;
+  z-index: -1;
+  transform: translate(100%, 50px);
+  transition: all 1s;
+}
