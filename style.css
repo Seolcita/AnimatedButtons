@@ -201,3 +201,58 @@ h2 {
   transform: translate(100%, 50px);
   transition: all 1s;
 }
+
+/* 3. Hover Effect Buttons*/
+
+.b3 {
+  margin: 50px 100px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffc93c;
+  font-size: 20px;
+  border: 3px solid #ffc93c;
+  padding: 13px;
+  position: relative;
+  transition: 1s;
+  /*   overflow: hidden; */
+}
+
+.b3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc93c;
+  transition: 1s;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+
+.b3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc93c;
+  transition: 1s;
+  transform: rotateY(90deg);
+  z-index: -1;
+}
+
+.xy:hover:before,
+.x:hover:before {
+  transform: rotateX(0deg);
+}
+
+.xy:hover:after,
+.y:hover:after {
+  transform: rotateY(0deg);
+}
+
+.b3:hover {
+  color: white;
+}
